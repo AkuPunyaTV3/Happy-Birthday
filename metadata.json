@@ -1,0 +1,6 @@
+{
+  "name": "Selamat Ulang Tahun Jovanka",
+  "description": "Website ucapan ulang tahun spesial, puisi menyentuh hati, kue interaktif, galeri foto lucu, dan pesan hangat untuk Jovanka.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,304 @@
+{
+  "entities": {
+    "SiteContent": {
+      "title": "SiteContent",
+      "description": "General text content for hero, cake, and footer sections of the birthday website",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the site content document"
+        },
+        "heroCelebrationPill": {
+          "type": "string",
+          "description": "Top celebratory badge text in hero"
+        },
+        "heroTitle": {
+          "type": "string",
+          "description": "Main hero greeting title"
+        },
+        "heroName": {
+          "type": "string",
+          "description": "Highlighted birthday person name"
+        },
+        "heroQuote": {
+          "type": "string",
+          "description": "Sincere birthday quote in hero box"
+        },
+        "cakeTitle": {
+          "type": "string",
+          "description": "Interactive cake section title"
+        },
+        "cakeSubtitle": {
+          "type": "string",
+          "description": "Interactive cake instruction text"
+        },
+        "grandFinaleTitle": {
+          "type": "string",
+          "description": "Grand finale banner title"
+        },
+        "grandFinaleQuote": {
+          "type": "string",
+          "description": "Grand finale heart-touching message"
+        },
+        "footerText": {
+          "type": "string",
+          "description": "Footer dedication text"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["heroTitle", "heroName"]
+    },
+    "Poem": {
+      "title": "Poem",
+      "description": "Touching birthday poem or letter",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the poem"
+        },
+        "title": {
+          "type": "string",
+          "description": "Poem title"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category: crying, heartfelt, funny_sweet, prayers"
+        },
+        "content": {
+          "type": "string",
+          "description": "Full text lines of the poem"
+        },
+        "authorNote": {
+          "type": "string",
+          "description": "Closing sender note or dedication"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["id", "title", "content"]
+    },
+    "SpecialReason": {
+      "title": "SpecialReason",
+      "description": "Reasons why Jovanka is special card",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the special reason card"
+        },
+        "order": {
+          "type": "number",
+          "description": "Display order index"
+        },
+        "emoji": {
+          "type": "string",
+          "description": "Card emoji icon"
+        },
+        "title": {
+          "type": "string",
+          "description": "Card title headline"
+        },
+        "description": {
+          "type": "string",
+          "description": "Card description explaining why she is special"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["id", "title", "description", "emoji"]
+    },
+    "VirtualGift": {
+      "title": "VirtualGift",
+      "description": "Virtual gift surprise box",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the gift box"
+        },
+        "title": {
+          "type": "string",
+          "description": "Wrapped gift box title"
+        },
+        "boxColor": {
+          "type": "string",
+          "description": "Tailwind gradient colors for the box"
+        },
+        "ribbonColor": {
+          "type": "string",
+          "description": "Ribbon color class"
+        },
+        "giftIcon": {
+          "type": "string",
+          "description": "Surprise gift icon/emoji"
+        },
+        "giftTitle": {
+          "type": "string",
+          "description": "Surprise gift headline"
+        },
+        "giftContent": {
+          "type": "string",
+          "description": "Detailed gift content and message"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["id", "title", "giftTitle", "giftContent"]
+    },
+    "GalleryPhoto": {
+      "title": "GalleryPhoto",
+      "description": "Photo and meme gallery item",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the photo"
+        },
+        "title": {
+          "type": "string",
+          "description": "Photo title"
+        },
+        "caption": {
+          "type": "string",
+          "description": "Photo caption or sweet quote"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "Image URL or data URI"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category: meme, cute, special"
+        },
+        "badge": {
+          "type": "string",
+          "description": "Sticker badge label"
+        },
+        "rotation": {
+          "type": "number",
+          "description": "Polaroid tilt angle"
+        },
+        "order": {
+          "type": "number",
+          "description": "Sort order"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["id", "title", "imageUrl"]
+    },
+    "ComplimentItem": {
+      "title": "ComplimentItem",
+      "description": "Mood booster compliment text item",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "text": {
+          "type": "string",
+          "description": "Compliment message text"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["id", "text"]
+    },
+    "WishItem": {
+      "title": "WishItem",
+      "description": "Guestbook wish or greeting message",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Sender name or nickname"
+        },
+        "message": {
+          "type": "string",
+          "description": "Wish message text"
+        },
+        "date": {
+          "type": "string",
+          "description": "Human readable date label"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "Avatar emoji"
+        },
+        "likes": {
+          "type": "number",
+          "description": "Likes counter"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["id", "name", "message", "avatar"]
+    }
+  },
+  "firestore": {
+    "/site_content/{contentId}": {
+      "schema": {
+        "$ref": "#/entities/SiteContent"
+      },
+      "description": "General text content of the website"
+    },
+    "/poems/{poemId}": {
+      "schema": {
+        "$ref": "#/entities/Poem"
+      },
+      "description": "Birthday poems and letters"
+    },
+    "/reasons/{reasonId}": {
+      "schema": {
+        "$ref": "#/entities/SpecialReason"
+      },
+      "description": "Special reasons cards"
+    },
+    "/gifts/{giftId}": {
+      "schema": {
+        "$ref": "#/entities/VirtualGift"
+      },
+      "description": "Virtual gift surprise boxes"
+    },
+    "/gallery/{photoId}": {
+      "schema": {
+        "$ref": "#/entities/GalleryPhoto"
+      },
+      "description": "Gallery photos and memes"
+    },
+    "/compliments/{complimentId}": {
+      "schema": {
+        "$ref": "#/entities/ComplimentItem"
+      },
+      "description": "Compliments and mood booster items"
+    },
+    "/wishes/{wishId}": {
+      "schema": {
+        "$ref": "#/entities/WishItem"
+      },
+      "description": "Guestbook wishes and messages"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    match /site_content/{contentId} {
+      allow read: if true;
+      allow write: if isValidId(contentId);
+    }
+
+    match /poems/{poemId} {
+      allow read: if true;
+      allow write: if isValidId(poemId);
+    }
+
+    match /reasons/{reasonId} {
+      allow read: if true;
+      allow write: if isValidId(reasonId);
+    }
+
+    match /gifts/{giftId} {
+      allow read: if true;
+      allow write: if isValidId(giftId);
+    }
+
+    match /gallery/{photoId} {
+      allow read: if true;
+      allow write: if isValidId(photoId);
+    }
+
+    match /compliments/{complimentId} {
+      allow read: if true;
+      allow write: if isValidId(complimentId);
+    }
+
+    match /wishes/{wishId} {
+      allow read: if true;
+      allow write: if isValidId(wishId);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
