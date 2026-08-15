@@ -21,7 +21,7 @@ import {
 import { GalleryItem, SiteContent } from '../types';
 import { INITIAL_GALLERY, DEFAULT_SITE_CONTENT } from '../data/initialData';
 import {
-  subscribeGallery,
+  subscribeGalleryItems,
   saveGalleryItemToDb,
   deleteGalleryItemFromDb,
   resetGalleryInDb,
@@ -76,7 +76,7 @@ export function PhotoMemeGallery({
 
   // Subscribe to real-time Firestore database
   useEffect(() => {
-    const unsubscribe = subscribeGallery((items) => {
+    const unsubscribe = subscribeGalleryItems((items) => {
       if (items && items.length > 0) {
         setGallery(items);
         // Also sync to local indexedDB as cache
